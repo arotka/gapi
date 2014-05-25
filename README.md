@@ -53,7 +53,7 @@ Installation
 Build
 --------------
 
-The Application will be built and packaged using Maven. There are only two dependencies needed for this application (Twitter4J and Pi4J). To make things easy, we will use the maven-dependency-plugin to copy the dependencies into a lib/ folder along side the main application. See [here](./master/pom.xml) for the complete pom.xml.
+The Application will be built and packaged using Maven. There are only two dependencies needed for this application (Twitter4J and Pi4J). To make things easy, we will use the maven-dependency-plugin to copy the dependencies into a lib/ folder along side the main application. See [here](./pom.xml) for the complete pom.xml.
 
 > * To build project you should launch : 
 
@@ -68,14 +68,14 @@ mvn clean install
 > *  This project uses the LBPH algorithm in OpenCV to perform face recognition. To use this algorithm you'll need to create a set of training data with pictures of faces that are and are not allowed to open the box.
   *  Download [The ORL Database of Faces](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html) . These faces make up the set of negative images which represent faces that are not allowed to unlock the door. 
   *  copy the faces database in script/training/training/negative.
-  *  Use [takePhotos.py](./master/script/training/takePhotos.py) script to generate images of the person who will be allowed to unlock the door .
+  *  Use [takePhotos.py](./script/training/takePhotos.py) script to generate images of the person who will be allowed to unlock the door .
   *  This script will take pictures with the  webcam and write them to the script/training/training/positive sub-directory.
     
 >  ```sh
 sudo python takePhotos.py
 ```
 
->  *  Once you've captured a number of positive training images, you can run the [makeTrainingDb.py](./master/script/training/makeTrainingDb.py) script to perform the training. 
+>  *  Once you've captured a number of positive training images, you can run the [makeTrainingDb.py](./script/training/makeTrainingDb.py) script to perform the training. 
 
 >  ```sh
 python makeTrainingDb.py
@@ -84,7 +84,7 @@ python makeTrainingDb.py
 > *  Once the training is complete. The training data is now stored in the file training.xml, copy it in script/matcher  sub-directory.
   
 ####  Motion:
-> * See  [here](./master/script/conf/motion.conf) for the complete motion configuration .
+> * See  [here](./script/conf/motion.conf) for the complete motion configuration .
 
 ####  JAVA Application:
 > * Configure your environment :

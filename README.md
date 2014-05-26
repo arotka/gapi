@@ -123,6 +123,15 @@ sudo /etc/init.d/motion start
 ```sh
 sudo java -jar rpiFaceRecognition-0.0.1-SNAPSHOT.jar
 ```
+But how does it work?
+-----------
+
+Webcam takes photos when someone moves in the monitored areas using open source project motion, 
+these images are processed to detect the face using opencv face detection.
+Once the face is detected ,it is processed and compared to stored faces on database using LBPH (Local Binary Patterns Histogram) algorithm in OpenCV , 
+to decide if the the face belongs to a person who is allowed to open the door .
+If the face of the person match with stored faces database , a signal will be send via GPIO to relay to let the electric current power the door strike using gpio4j, then a tweet will be sended with the photo of person who try to open the door using twitter4j.
+Finally if the photos match raspberry send a signal to a 5V relay to open courant for powering the electric door strike and send a tweet contains a photo of the person who unlock the door .
 
 have fun :) .
 

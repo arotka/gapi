@@ -1,4 +1,4 @@
-Gapi
+Gaπ
 ====
 GaPi is a system that allows people to unlock their doors over the face recognition, using the Raspberry Pi and a LOGITECH Webcam and electric door strike.
 

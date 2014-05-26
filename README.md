@@ -65,7 +65,7 @@ mvn clean install
 
 ##### Configure Plugins. Instructions in following README.md files :
 #### Opencv training database:
-> *  This project uses the LBPH algorithm in OpenCV to perform face recognition. To use this algorithm you'll need to create a set of training data with pictures of faces that are and are not allowed to open the box.
+> *  This project uses the LBPH algorithm in OpenCV to perform face recognition. To use this algorithm you'll need to create a set of training data with pictures of faces that are allowed to unlock the door and the faces that are not allowed to unlock the door.
   *  Download [The ORL Database of Faces](http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html) . These faces make up the set of negative images which represent faces that are not allowed to unlock the door. 
   *  copy the faces database in script/training/training/negative.
   *  Use [takePhotos.py](./script/training/takePhotos.py) script to generate images of the person who will be allowed to unlock the door .
